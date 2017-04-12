@@ -5,7 +5,7 @@ import java.math.MathContext;
 
 /**
  * Klasse, die ein Wuerfelexperiment simuliert.
- * kjlkjlkjlkjlkjkljk
+ * kjlkjlkjlkjlkjkljkfojj
  * @author Sabine Lorius und Thomas Pause
  */
 
