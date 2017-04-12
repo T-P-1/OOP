@@ -21,6 +21,7 @@ public class Main {
         Wuerfelexperiment wuerfelxperiment;
         double[] ergebnis;
         boolean repeat = true;
+
         while (repeat) {
             Scanner scanner = new Scanner(System.in);
             anzahlWuerfe = UserInput.sc(scanner);
@@ -43,9 +44,9 @@ public class Main {
                     (ergebnis[5] * 100) + " %" +
                     " \nFuer einen neuen Versuch bitte das Programm erneut starten!");
 
-            Scanner scan2=new Scanner(System.in);
+            Scanner scanner2=new Scanner(System.in);
             System.out.println("\n\nProgramm erneut starten? [j/n]");
-            String jaNein = scan2.next();
+            String jaNein = scanner2.next();
             repeat = jaNein.equalsIgnoreCase("j");
         }
     }
