@@ -10,10 +10,21 @@ import java.math.MathContext;
  */
 
 public class Wuerfelexperiment {
-
+    /**
+     * Anzahl der Versuche aus der Klasse UserInput.
+     */
     private int anzahlVersuche;
+    /**
+     *Erstellt ein Objekt Wuerfel der Klasse Wuerfel.
+     */
     private Wuerfel wuerfel1;
+    /**
+     *Erstellt ein Objekt Wuerfel der Klasse Wuerfel.
+     */
     private Wuerfel wuerfel2;
+    /**
+     *Erstellt ein Objekt Wuerfel der Klasse Wuerfel.
+     */
     private Wuerfel wuerfel3;
 
     /**
@@ -58,18 +69,19 @@ public class Wuerfelexperiment {
                 absoluteHaeufigkeit2++;
             }
         }
-        //Berechnung relative Haeufigkeit für das Ereignis 2 Gleiche
+
+        //Berechnung relative Haeufigkeit fÃ¼r das Ereignis 2 Gleiche
         relativeHaeufigkeit2 = BigDecimal.valueOf(absoluteHaeufigkeit2)
                 .divide(BigDecimal.valueOf(anzahlVersuche), MathContext.UNLIMITED);
-        //Berechnung relative Haeufigkeit für das Ereignis 3 Gleiche
+        //Berechnung relative Haeufigkeit fÃ¼r das Ereignis 3 Gleiche
         relativeHaeufigkeit3 = BigDecimal.valueOf(absoluteHaeufigkeit3)
                 .divide(BigDecimal.valueOf(anzahlVersuche), MathContext.UNLIMITED);
-        //Berechnung relativer Fehler für das Ereignis 2 Gleiche
+        //Berechnung relativer Fehler fÃ¼r das Ereignis 2 Gleiche
         relativerFehler2 = relativeHaeufigkeit2
                 .subtract(BigDecimal.valueOf(WAHRSCHEINLICHKEIT2))
                 .divide(BigDecimal.valueOf(WAHRSCHEINLICHKEIT2), MathContext.DECIMAL128)
                 .abs();
-        //Berechnung relativer Fehler für das Ereignis 3 Gleiche
+        //Berechnung relativer Fehler fÃ¼r das Ereignis 3 Gleiche
         relativerFehler3 = relativeHaeufigkeit3
                 .subtract(BigDecimal.valueOf(WAHRSCHEINLICHKEIT3))
                 .divide(BigDecimal.valueOf(WAHRSCHEINLICHKEIT3), MathContext.DECIMAL128)

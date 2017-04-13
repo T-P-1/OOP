@@ -18,18 +18,19 @@ public class Main {
     public static void main(String[] args) {
 
         int anzahlWuerfe;
-        Wuerfelexperiment wuerfelxperiment;
+        Wuerfelexperiment wuerfelexperiment;
         double[] ergebnis;
-        boolean repeat = true;
+        boolean play = true;
 
-        while (repeat) {
+        while (play == true) {
             Scanner scanner = new Scanner(System.in);
+
             anzahlWuerfe = UserInput.sc(scanner);
 
-            wuerfelxperiment = new Wuerfelexperiment(anzahlWuerfe);
-            ergebnis = wuerfelxperiment.start();
+            wuerfelexperiment = new Wuerfelexperiment(anzahlWuerfe);
+            ergebnis = wuerfelexperiment.start();
 
-            System.out.print("\nExperiment beendet.\n" +
+            System.out.print("\nBerechnungen beendet:\n" +
                     "Relative Haeufigkeit von 2 gleichen Wuerfen: " +
                     (ergebnis[0] * 100) + " %" +
                     " \nRelative Haeufigkeit von 3 gleichen Wuerfen: " +
@@ -42,12 +43,11 @@ public class Main {
                     (ergebnis[4] * 100) + " %" +
                     " \nMathematische Wahrscheinlichkeit (3 gleiche Wuerfe): " +
                     (ergebnis[5] * 100) + " %" +
-                    " \nFuer einen neuen Versuch bitte das Programm erneut starten!");
+                    " \n-------------------------------------------------------------\n");
 
-            Scanner scanner2=new Scanner(System.in);
-            System.out.println("\n\nProgramm erneut starten? [j/n]");
-            String jaNein = scanner2.next();
-            repeat = jaNein.equalsIgnoreCase("j");
+            Scanner scPlay = new Scanner(System.in);
+            play = UserInput.fortfahren(scPlay);
         }
+
     }
 }

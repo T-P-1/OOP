@@ -5,9 +5,17 @@ package Aufgabe02;
  */
 
 public class Wuerfel {
-
+    /**
+     * Minimale Augenzahl des Wuerfels.
+     */
     private int min;
+    /**
+     * Maximale Augenzahl des Wuerfels.
+     */
     private int max;
+    /**
+     * Augenzahl nach dem Wuerfeln.
+     */
     private int augen;
 
     /**
@@ -17,6 +25,7 @@ public class Wuerfel {
      * @param var2 max. bzw. min. Wert.
      */
     public Wuerfel(int var1, int var2) {
+
         if(var2 < var1) {
             this.min = var2;
             this.max = var1;
