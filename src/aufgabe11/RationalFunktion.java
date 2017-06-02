@@ -3,7 +3,7 @@ package aufgabe11;
 /**
 
  * Rationale Funktion (Polynom / Polynom),
- * D = R \<Nennerpolynomnullstellen>, W = R.
+ * D = R <Nennerpolynomnullstellen>, W = R.
  *
  * @author Monika Meiler, Sabine Lorius und Thomas Pause
  */
@@ -25,7 +25,7 @@ public class RationalFunktion extends Funktion
      * @return true, bei erfolgreichem Eintrag
      * false, falls keine Polynome existieren
      */
-    public boolean setRationaleFunktion
+    public boolean setRationalFunktion
     ( Polynom z, Polynom n)
     {
         if( z == null || n == null)
@@ -52,7 +52,7 @@ public class RationalFunktion extends Funktion
         Polynom n = new Polynom();
         if( !n.konsolenEingabe()) n = null;
 // Setzen des Zaehler-und Nennerpolynoms.
-        return setRationaleFunktion(z, n);
+        return setRationalFunktion(z, n);
     }
     /**
      * Berechnen eines Funktionswertes Polynom / Polynom
@@ -75,6 +75,6 @@ public class RationalFunktion extends Funktion
      * @return Funktion in linearer Schreibweise
      */
     public String toString(){
-        return "( " + zaehler + " ) / ( " + nenner + " )";
+        return "( " + this.zaehler + " ) / ( " + this.nenner + " )";
     }
 }

@@ -47,17 +47,17 @@ public class Polynom extends Funktion
         Scanner sc1=null;
         Scanner sc2=null;
 
-        System.out.println( "Polynomeingabe");
+        System.out.println( "Polynomeingabe\n--------------");
 
         while(!richtigeingeben1){
             try{
-                System.out.println("bitte die Grad der polynom eingeben , die Grad einer Polynom ist ein positiver integer");
+                System.out.println("Bitte den Grad des Polynoms eingeben (Typ int):");
                 sc1=new Scanner(System.in);
                 grad=sc1.nextInt();
 
                 if(grad>=0) { richtigeingeben1=true;}
             }catch (java.util.InputMismatchException e){
-                System.out.println("sie haben falsch eingegeben");
+                System.out.println("Falsche Eingabe!");
                 e.getStackTrace();
             }
         }
@@ -72,16 +72,17 @@ public class Polynom extends Funktion
             for( int i = 0; i < grad + 1; i++){
                 while(!richtigeingeben2[i]){
                     try{
-                        System.out.println("bitte die coeffizient der x hoch "+i+" eingeben ,es hat Datei-Type double");
+                        System.out.println("Bitte den Koeffizienten für x hoch "+i+" eingeben (Typ double):");
                         sc2=new Scanner(System.in);
                         koeff[ i] =sc2.nextDouble();
-                        richtigeingeben2[i]=true;}
+                        richtigeingeben2[i]=true;
+                    }
                     catch (java.util.InputMismatchException e){
-                        System.out.println("sie haben falsch eingegeben");
+                        System.out.println("Falsche Eingabe!");
                         e.getStackTrace();
                     }
                 }
-            };
+            }
         }
         return setPolynom( koeff);
     }
@@ -90,8 +91,7 @@ public class Polynom extends Funktion
     /**
      * Berechnen eines Funktionswertes nach HORNER.
      * @param arg Argument
-     *
-     @return f( arg)
+     * @return f( arg)
      */
     public double wert( double arg)
     {

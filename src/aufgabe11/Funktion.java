@@ -13,8 +13,7 @@ public abstract class Funktion
     /**
      * Berechnen eines Funktionswertes, abstract.
      *
-     * @param arg
-     *            Argument
+     * @param arg Argument
      * @return f(arg)
      */
     public abstract double wert(double arg);
@@ -59,7 +58,7 @@ public abstract class Funktion
     /**
      * Darstellen einer Funktion.
      *
-     * @return Funktion in linear er Schreibweise
+     * @return Funktion in linearer Schreibweise
      */
     public String toString() {
         return "";
