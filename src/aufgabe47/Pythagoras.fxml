@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.21906354515050167" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <items>
+    <AnchorPane fx:id="inputPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+          <Button layoutX="49.0" layoutY="222.0" mnemonicParsing="false" text="Build" textFill="#0b1a75" />
+            <ColorPicker fx:id="farbeRechts" editable="true" layoutX="14.0" layoutY="71.0" promptText="Farbe Rechts" />
+            <ColorPicker fx:id="farbeLinks" editable="true" layoutX="14.0" layoutY="130.0" promptText="Farbe Links" />
+            <Label fx:id="inputLabel1" layoutX="12.0" layoutY="170.0" text="Detailtiefe" />
+            <TextField fx:id="inputField1" layoutX="12.0" layoutY="187.0" onAction="#input1" prefHeight="25.0" prefWidth="104.0" promptText="positive Zahl" />
+            <Label fx:id="inputLabel3" layoutX="12.0" layoutY="107.0" text="Farbe Links" />
+            <Label fx:id="inputLabel2" layoutX="12.0" layoutY="48.0" text="Farbe Rechts" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="pythagorasPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TitledPane layoutY="4.0" prefHeight="391.0" prefWidth="464.0" text="Konstruktion von Pythagoras-Bäumen" textFill="#e40606" underline="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TitledPane>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
